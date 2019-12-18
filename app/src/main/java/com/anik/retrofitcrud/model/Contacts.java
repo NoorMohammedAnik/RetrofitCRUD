@@ -10,6 +10,13 @@ public class Contacts {
     private String name;
     @SerializedName("email")
     private String email;
+
+    @SerializedName("cell")
+    private String cell;
+
+    @SerializedName("password")
+    private String password;
+
     @SerializedName("value")
     private String value;
     @SerializedName("message")
@@ -26,6 +33,15 @@ public class Contacts {
     public String getEmail() {
         return email;
     }
+
+    public String getCell() {
+        return cell;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
 
     public String getValue() {
         return value;

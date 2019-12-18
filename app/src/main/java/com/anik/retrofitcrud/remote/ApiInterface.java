@@ -1,5 +1,6 @@
 package com.anik.retrofitcrud.remote;
 
+import com.anik.retrofitcrud.Constant;
 import com.anik.retrofitcrud.model.Contacts;
 
 import java.util.List;
@@ -21,6 +22,25 @@ public interface ApiInterface {
     public Call<Contacts> insertUser(
             @Field("name") String name,
             @Field("email") String email);
+
+
+    //for signup
+    @FormUrlEncoded
+    @POST("retrofit/POST/signup.php")
+     Call<Contacts> signUp(
+            @Field(Constant.KEY_NAME) String name,
+            @Field(Constant.KEY_CELL) String cell,
+            @Field(Constant.KEY_PASSWORD) String password);
+
+
+
+    //for login
+    @FormUrlEncoded
+    @POST("retrofit/POST/login.php")
+    Call<Contacts> login(
+            @Field(Constant.KEY_CELL) String cell,
+            @Field(Constant.KEY_PASSWORD) String password);
+
 
     @FormUrlEncoded
     @POST("retrofit/POST/editcontact.php")

@@ -7,10 +7,16 @@
         android:title="Search"
         android:icon="@drawable/ic_search"
         app:showAsAction="collapseActionView|ifRoom"
-        app:actionViewClass="android.support.v7.widget.SearchView"/>
+        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
     <item
         android:id="@+id/add"
         android:icon="@drawable/ic_action_name"
+        android:title="Add"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_logout"
         android:title="Add"
         app:showAsAction="ifRoom" />
 </menu>

@@ -1,12 +1,14 @@
 package com.anik.retrofitcrud.remote;
 
 
+import com.anik.retrofitcrud.Constant;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 
-    public static final String BASE_URL = "http://android.cseiiuc.cf/";
+    public static final String BASE_URL = Constant.BASE_URL;
     public static Retrofit retrofit = null;
 
     public static Retrofit getApiClient() {

@@ -3,17 +3,16 @@ package com.anik.retrofitcrud;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SearchView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.anik.retrofitcrud.model.Contacts;
@@ -113,6 +112,11 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.add:
                 startActivity(new Intent(this, EditorActivity.class));
+                return true;
+
+            case R.id.logout:
+                startActivity(new Intent(this, LoginActivity.class));
+                finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
